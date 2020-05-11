@@ -14,7 +14,7 @@ const pipe = (...functions) => functions.reduce(_pipe);
 const fallbackArrayPosition = (array) => (position, isStart) =>
   position === -1 ? (isStart ? 0 : array.length - 1) : position;
 
-const isValidDateString = (date) => isNaN(new Date(date));
+const isValidDateString = (date) => !isNaN(new Date(date));
 
 /**
  * Implements binary search to return position in series array for a specific
